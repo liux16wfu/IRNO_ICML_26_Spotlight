@@ -52,8 +52,8 @@
 
   <title>IRNO: Iterative Refinement Neural Operators | ICML 2026 Spotlight</title>
 
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/png" href="static/images/icon.png">
+  <link rel="apple-touch-icon" href="static/images/icon.png">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
@@ -135,7 +135,7 @@
     /* Method section */
     .method-figure {
       margin: 2rem auto;
-      max-width: 587px;
+      max-width: 800px;
     }
     .method-figure img {
       width: 100%;
@@ -607,10 +607,10 @@
             <div class="column has-text-centered" style="margin-top:1.5rem;">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/ARXIV_ID.pdf" target="_blank"
+                  <a href="#" target="_blank"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                    <span>Paper</span>
+                    <span>Slides</span>
                   </a>
                 </span>
                 <span class="link-block">
@@ -642,7 +642,10 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">TL;DR</h2>
-          <p style="font-size:1.05rem; color:var(--text-secondary); max-width:680px; margin:0 auto 1.5rem; line-height:1.75;">
+          <p style="font-size:1.2rem; color:var(--text-primary); max-width:680px; margin:0 auto 0.75rem; line-height:1.75; font-weight:500;">
+            IRNO treats operator prediction not as a one-shot map, but as an iterative refinement process.
+          </p>
+          <p style="font-size:1.0rem; color:var(--text-secondary); max-width:680px; margin:0 auto 1.5rem; line-height:1.75;">
             <span class="hl">Iterative Refinement Neural Operator (IRNO)</span> augments a pretrained neural operator with a shared-weight refinement module that iteratively corrects residual errors through a fixed-point-style update. This enables the model to recover fine-scale structures that are often smoothed out by single-pass neural operators.
           </p>
 
