@@ -494,9 +494,11 @@
     }
     .table-scroll {
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
     .results-table {
       width: 100%;
+      min-width: 660px;
       border-collapse: collapse;
       font-size: 0.95rem;
       color: var(--text-primary);
@@ -1277,7 +1279,7 @@
 
   <script>
     function switchTable(id, btn) {
-      document.querySelectorAll('.results-table-wrap').forEach(el => el.style.display = 'none');
+      ['t1', 't2'].forEach(tid => document.getElementById(tid).style.display = 'none');
       document.querySelectorAll('.table-toggle-btn').forEach(el => el.classList.remove('active'));
       document.getElementById(id).style.display = 'block';
       btn.classList.add('active');
