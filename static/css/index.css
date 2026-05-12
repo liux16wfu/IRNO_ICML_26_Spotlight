@@ -90,7 +90,6 @@ body {
 /* Hero Section Modernization */
 .hero {
   position: relative;
-  overflow: hidden;
 }
 
 .hero.is-light {
