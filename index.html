@@ -942,7 +942,6 @@
             <p class="table-caption">
               Iterative error reduction across physical systems. FNO evaluated at \(K=6\), TFNO and WDSR at \(K=4\).
               Metrics are VRMSE for TR-2D and Active Matter; ACC and RFNE for ERA5.
-              ERA5 FNO results use the progressive spectral schedule.
             </p>
             <div class="table-scroll">
             <table class="results-table">
@@ -997,7 +996,7 @@
                   <td>WDSR</td>
                   <td>0.9091</td>
                   <td><strong>0.9104</strong></td>
-                  <td class="impr">0.14%</td>
+                  <td class="impr">0.143%</td>
                 </tr>
                 <tr class="metric-sep">
                   <td rowspan="2" class="metric-cell">RFNE&thinsp;↓</td>
@@ -1065,16 +1064,16 @@
         <div class="column">
           <h2 class="title is-3">Spectral Dynamics</h2>
           <p style="font-size:0.95rem; color:var(--text-secondary); max-width:680px; margin:0 auto 1.5rem;">
-            IRNO systematically reduces error across frequency bands, with the largest gains in mid-to-high frequencies where base operators exhibit the strongest spectral bias.
+            Across both panels (Active Matter, FNO), mid-to-high frequency error decreases monotonically with refinement, with the largest relative reductions near the Nyquist limit.
           </p>
           <div class="fig-grid-2 fig-equal-height">
             <figure class="fig-item">
-              <img src="static/images/average_spectral_error.png" alt="Normalized spectral error ratio across refinement steps" loading="lazy">
-              <figcaption>Median normalized spectral error ratio across refinement steps. IRNO consistently attenuates mid-to-high frequency error.</figcaption>
+              <img src="static/images/average_spectral_error.png" alt="Dataset-level median normalized spectral error ratios" loading="lazy">
+              <figcaption>Dataset-level median normalized spectral error ratios \(\tilde{E}^{(k)}(\omega)\) across the test set, with shaded interquartile ranges (25–75%). IRNO exhibits consistent attenuation of mid-to-high frequency error with increasing refinement steps, with stable behavior near the Nyquist limit \(\omega = 128\).</figcaption>
             </figure>
             <figure class="fig-item">
-              <img src="static/images/spectral_bias_field_3.png" alt="Spectral bias field visualization" loading="lazy">
-              <figcaption>Spatial field visualization of spectral bias. Fine-scale details progressively recovered across refinement steps.</figcaption>
+              <img src="static/images/per_sample.png" alt="Instance-level spectral MSE trajectories" loading="lazy">
+              <figcaption>Instance-level spectral MSE trajectories for a representative test sample across \(k \in [0, 12]\) refinement steps. Each curve shows the radial-spectral error of the base operator and successive IRNO refinements, illustrating monotonic reduction of spectral error and stable behavior beyond the training cutoff.</figcaption>
             </figure>
           </div>
         </div>
